@@ -18,7 +18,7 @@ public class HttpApplication extends AbstractVerticle {
     // Create a router object.
     Router router = Router.router(vertx);
 
-    router.get("/api/greeting").handler(this::greeting);
+    router.get("/api/greeting").handler(this::greetings);
     router.get("/*").handler(StaticHandler.create());
 
     // Create the HTTP server and pass the "accept" method to the request handler.
@@ -36,7 +36,7 @@ public class HttpApplication extends AbstractVerticle {
 
   }
 
-  private void greeting(RoutingContext rc) {
+  private void greetings(RoutingContext rc) {
     String name = rc.request().getParam("name");
     if (name == null) {
       name = "World";
