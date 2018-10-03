@@ -40,7 +40,7 @@ public class HttpApplication extends AbstractVerticle {
   private void greetings(RoutingContext rc) {
     String name = rc.request().getParam("name");
     if (name == null) {
-      name = "Holzfäller ";
+      name = "Holzfäller";
     }
 
     JsonObject response = new JsonObject()
