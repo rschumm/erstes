@@ -23,7 +23,7 @@
 </div>
 <div class="sect2">
 <h3 id="_using_the_greeting_service">Using the greeting service</h3>
-<h3 id="_using_the_greeting_service">(neu extra für Florian)</h3>
+<h3 id="_using_the_greeting_service">(neu extra für die Katze von Wallisellen.)</h3>
 
 </div>
 </div>
@@ -32,7 +32,7 @@
         <form class="form-inline">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="World">
+                <input type="text" class="form-control" id="name" placeholder="Holzfäller">
             </div>
             <button id="invoke" type="submit" class="btn btn-success">Invoke</button>
         </form>
@@ -50,7 +50,7 @@
 <script>
     $(document).ready(function() {
        $("#invoke").click(function(e) {
-          var n = $("#name").val() || "World";
+          var n = $("#name").val() || "Holzfäller";
           $.getJSON("/api/greeting?name=" + n, function(res) {
               $("#greeting-result").text(JSON.stringify(res));
           });
